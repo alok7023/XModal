@@ -16,9 +16,9 @@ function App() {
   };
   return (
     <div className="modal">
+      <h1>User Details Modal</h1>
+      <button onClick={openModal}>Open Form</button>
       <div className="modal-content">
-        <h1>User Details Modal</h1>
-        <button onClick={openModal}>Open Form</button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
