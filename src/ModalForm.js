@@ -34,17 +34,15 @@ const ModalForm = ({ closeModal }) => {
     <div className="container">
       <h1>Fill Details</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">
-          Username:
-          <input
-            type="text"
-            id="username"
-            value={formData.username}
-            name="username"
-            onChange={handleChange}
-            required
-          />
-        </label>
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          value={formData.username}
+          name="username"
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="email">Email Address:</label>
         <input
           type="email"
@@ -54,29 +52,24 @@ const ModalForm = ({ closeModal }) => {
           onChange={handleChange}
           required
         />
-        <label htmlFor="phone">
-          Phone Number:
-          <input
-            type="tel"
-            value={formData.phoneNumber}
-            name="phoneNumber"
-            id="phone"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label htmlFor="dob">
-          Date of Birth:
-          <input
-            type="date"
-            value={formData.dateOfBirth}
-            name="dateOfBirth"
-            id="dob"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
+        <label htmlFor="phone">Phone Number:</label>
+        <input
+          type="tel"
+          value={formData.phoneNumber}
+          name="phoneNumber"
+          id="phone"
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="dob">Date of Birth:</label>
+        <input
+          type="date"
+          value={formData.dateOfBirth}
+          name="dateOfBirth"
+          id="dob"
+          onChange={handleChange}
+          required
+        />
         <button type="submit" className="submit-button">
           Submit
         </button>
