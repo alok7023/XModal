@@ -18,13 +18,23 @@ const ModalForm = ({ closeModal }) => {
     return selectedDate > today;
   };
 
+  const isEmailValid = (email) => {
+    // A simple regex for email validation (you may use a more comprehensive one)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = (e) => {
+    if(isEmailValid(formData.email)) {
+        alert("Invalid email. Please check your email address.")
+        return;
+    }
     if (isFutureDate(formData.dateOfBirth)) {
       alert("Invalid date of birth. Date of Birth cannot be in the future.");
       return;
     }
     if (formData.phoneNumber.length !== 10) {
-      alert("Invalid phone number. Please enter a 10 digit phone number.");
+      alert("Invalid phone number. Please enter a 10-digit phone number.");
       return;
     }
     e.preventDefault();
@@ -55,9 +65,9 @@ const ModalForm = ({ closeModal }) => {
         <label htmlFor="phone">Phone Number:</label>
         <input
           type="tel"
-          value={formData.phoneNumber}
-          name="phoneNumber"
           id="phone"
+          name="phoneNumber"
+          value={formData.phoneNumber}
           onChange={handleChange}
           required
         />
