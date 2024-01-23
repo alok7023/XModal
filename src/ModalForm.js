@@ -34,31 +34,31 @@ const ModalForm = ({ closeModal }) => {
     <div className="container">
       <h1>Fill Details</h1>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label htmlFor="username">
           username:
           <input
             type="text"
+            id="username"
             value={formData.username}
             name="username"
-            id="username"
             onChange={handleChange}
             required
           />
         </label>
         <br />
-        <label>
+        <label htmlFor="email">
           Email Address:
           <input
             type="email"
+            id="email"
             value={formData.email}
             name="email"
-            id="email"
             onChange={handleChange}
             required
           />
         </label>
         <br />
-        <label>
+        <label htmlFor="phone">
           Phone Number:
           <input
             type="tel"
@@ -70,7 +70,7 @@ const ModalForm = ({ closeModal }) => {
           />
         </label>
         <br />
-        <label>
+        <label htmlFor="dob">
           Date of Birth:
           <input
             type="date"
