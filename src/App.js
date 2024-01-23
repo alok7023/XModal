@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import ModalForm from "./ModalForm";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -15,17 +15,18 @@ function App() {
     setModalIsOpen(false);
   };
   return (
-    <div>
-      <h1>User Details Modal</h1>
-      <button onClick={openModal}>Open Form</button>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-      >
-        <ModalForm closeModal={closeModal}/>
-      </Modal>
-      
+    <div className="modal">
+      <div className="modal-content">
+        <h1>User Details Modal</h1>
+        <button onClick={openModal}>Open Form</button>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Example Modal"
+        >
+          <ModalForm closeModal={closeModal} />
+        </Modal>
+      </div>
     </div>
   );
 }
