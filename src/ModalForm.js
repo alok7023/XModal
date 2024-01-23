@@ -3,10 +3,10 @@ import "./App.css";
 
 const ModalForm = ({ closeModal }) => {
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    phoneNumber: '',
-    dateOfBirth: '',
+    username: "",
+    email: "",
+    phoneNumber: "",
+    dateOfBirth: "",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,19 +45,15 @@ const ModalForm = ({ closeModal }) => {
             required
           />
         </label>
-        <br />
-        <label htmlFor="email">
-          Email Address:
-          <input
-            type="email"
-            id="email"
-            value={formData.email}
-            name="email"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
+        <label htmlFor="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          value={formData.email}
+          name="email"
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="phone">
           Phone Number:
           <input
@@ -69,7 +65,6 @@ const ModalForm = ({ closeModal }) => {
             required
           />
         </label>
-        <br />
         <label htmlFor="dob">
           Date of Birth:
           <input
@@ -82,7 +77,9 @@ const ModalForm = ({ closeModal }) => {
           />
         </label>
         <br />
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
     </div>
   );
