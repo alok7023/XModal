@@ -3,10 +3,10 @@ import "./App.css";
 
 const ModalForm = ({ closeModal }) => {
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    phoneNumber: "",
-    dateOfBirth: "",
+    username: '',
+    email: '',
+    phoneNumber: '',
+    dateOfBirth: '',
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
