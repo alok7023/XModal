@@ -35,7 +35,7 @@ const ModalForm = ({ closeModal }) => {
       <h1>Fill Details</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">
-          username:
+          Username:
           <input
             type="text"
             id="username"
