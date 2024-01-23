@@ -40,6 +40,7 @@ const ModalForm = ({ closeModal }) => {
             type="text"
             value={formData.username}
             name="username"
+            id="username"
             onChange={handleChange}
             required
           />
@@ -51,6 +52,7 @@ const ModalForm = ({ closeModal }) => {
             type="email"
             value={formData.email}
             name="email"
+            id="email"
             onChange={handleChange}
             required
           />
@@ -62,6 +64,7 @@ const ModalForm = ({ closeModal }) => {
             type="tel"
             value={formData.phoneNumber}
             name="phoneNumber"
+            id="phone"
             onChange={handleChange}
             required
           />
@@ -73,12 +76,13 @@ const ModalForm = ({ closeModal }) => {
             type="date"
             value={formData.dateOfBirth}
             name="dateOfBirth"
+            id="dob"
             onChange={handleChange}
             required
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );
